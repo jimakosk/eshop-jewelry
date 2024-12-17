@@ -1,0 +1,22 @@
+.hero-section {
+    background: url('assets/images/jewelry-hero.jpg') no-repeat center center / cover;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  footer {
+    background-color: #343a40;
+  }
+  

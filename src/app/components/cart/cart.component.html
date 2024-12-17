@@ -1,0 +1,24 @@
+<div class="container my-5">
+    <h2>Your Cart</h2>
+    <div *ngIf="cart.length > 0; else emptyCart">
+      <div *ngFor="let item of cart" class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{ item.image }}" class="img-fluid rounded-start" alt="{{ item.name }}">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">{{ item.description }}</p>
+              <p class="card-text"><strong>${{ item.price }}</strong></p>
+              <button class="btn btn-danger" (click)="removeFromCart(item)">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #emptyCart>
+      <p>Your cart is empty.</p>
+    </ng-template>
+  </div>
+  
